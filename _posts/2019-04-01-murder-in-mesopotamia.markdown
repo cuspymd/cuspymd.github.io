@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "메소포타미아의 살인"
-categories: 책
+categories: book
 tags: "애거서 크리스티"
 ---
 ![메소포타미아의 살인](http://image.yes24.com/momo/TopCate0001/kepub/L_536183.jpg)
