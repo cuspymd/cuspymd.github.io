@@ -24,7 +24,7 @@ github_username:  cuspymd
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-midnight
 plugins: []
 
 google_analytics: UA-137715107-1
