@@ -35,7 +35,6 @@ gem install bundler
 
 4. 의존성 설치:
 ```bash
-cd docs
 bundle install
 ```
 
@@ -44,7 +43,6 @@ bundle install
 ### 로컬 개발 서버 실행
 
 ```bash
-cd docs
 bundle exec jekyll serve
 ```
 
@@ -57,7 +55,7 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000
 
 ### 새 블로그 포스트 작성
 
-1. `docs/_posts/` 디렉토리에 새 파일 생성
+1. `_posts/` 디렉토리에 새 파일 생성
 2. 파일명 형식: `YYYY-MM-DD-title.markdown`
 3. Jekyll front matter 포함:
 
@@ -76,32 +74,29 @@ categories: 카테고리
 
 정적 사이트 빌드:
 ```bash
-cd docs
 bundle exec jekyll build
 ```
 
-빌드된 파일은 `docs/_site/` 디렉토리에 생성됩니다.
+빌드된 파일은 `_site/` 디렉토리에 생성됩니다.
 
 ## 프로젝트 구조
 
 ```
-├── docs/
-│   ├── _config.yml          # Jekyll 설정
-│   ├── _posts/              # 블로그 포스트
-│   ├── _layouts/            # 레이아웃 템플릿
-│   ├── _includes/           # 재사용 가능한 컴포넌트
-│   ├── assets/              # CSS, 이미지 등
-│   ├── Gemfile              # Ruby 의존성
-│   └── index.md             # 홈페이지
-├── org/                     # Org-mode 원본 파일
+├── _config.yml              # Jekyll 설정
+├── _posts/                  # 블로그 포스트
+├── _layouts/                # 레이아웃 템플릿
+├── _includes/               # 재사용 가능한 컴포넌트
+├── assets/                  # CSS, 이미지 등
+├── Gemfile                  # Ruby 의존성
+├── index.md                 # 홈페이지
 └── README.md
 ```
 
 ## 커스터마이징
 
-- **스타일**: `docs/assets/css/style.scss` 에서 CSS 수정
-- **레이아웃**: `docs/_layouts/` 에서 HTML 템플릿 수정
-- **설정**: `docs/_config.yml` 에서 사이트 설정 변경
+- **스타일**: `assets/css/style.scss` 에서 CSS 수정
+- **레이아웃**: `_layouts/` 에서 HTML 템플릿 수정
+- **설정**: `_config.yml` 에서 사이트 설정 변경
 
 ## GitHub Pages 배포
 
