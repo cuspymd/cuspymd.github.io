@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@use "{{ site.theme }}";
 
 body {
   font-family: 'Noto Sans KR', Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;

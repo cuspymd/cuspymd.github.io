@@ -28,6 +28,9 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9"
+
+# Suppress Ruby 3.2 deprecation warnings
+gem "did_you_mean", "~> 1.6"
 
 gem "jekyll-theme-hacker", "~> 0.2.0"
