@@ -36,4 +36,3 @@ google_analytics: UA-137715107-1
 exclude:
   - Gemfile
   - Gemfile.lock
-  - shell.nix
