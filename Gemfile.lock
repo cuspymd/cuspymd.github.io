@@ -28,7 +28,7 @@ GEM
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
     csv (3.3.5)
-    did_you_mean (1.6.3)
+    did_you_mean (2.0.0)
     dnsruby (1.72.4)
       base64 (~> 0.2.0)
       logger (~> 1.6.5)
@@ -37,6 +37,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    erb (5.0.1)
     ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
@@ -304,11 +305,15 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  did_you_mean (~> 1.6)
+  did_you_mean (~> 2.0)
+  erb
   github-pages
   jekyll-theme-hacker (~> 0.2.0)
   tzinfo-data
   webrick (~> 1.9)
+
+RUBY VERSION
+   ruby 3.4.4p34
 
 BUNDLED WITH
    2.6.9

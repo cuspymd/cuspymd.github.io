@@ -30,7 +30,10 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 gem "webrick", "~> 1.9"
 
-# Suppress Ruby 3.2 deprecation warnings
-gem "did_you_mean", "~> 1.6"
+# Suppress Ruby 3.4 deprecation warnings
+gem "did_you_mean", "~> 2.0"
 
 gem "jekyll-theme-hacker", "~> 0.2.0"
+
+# Required for Ruby 3.4
+gem "erb"
