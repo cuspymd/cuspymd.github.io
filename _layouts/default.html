@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Theme detection script -->
+    <script>
+        // Check for saved theme preference or default to OS preference
+        const getThemePreference = () => {
+            if (localStorage.getItem('theme')) {
+                return localStorage.getItem('theme');
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        
+        // Set theme on document
+        const setTheme = (theme) => {
+            localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+        };
+        
+        // Initialize theme
+        setTheme(getThemePreference());
+        
+        // Listen for OS theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+    
+    {% if site.google_analytics %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <nav class="site-nav">
+                <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+                
+                <div class="nav-links">
+                    <a href="{{ '/' | relative_url }}">Home</a>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                        <span class="theme-toggle-light">☀️</span>
+                        <span class="theme-toggle-dark">🌙</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="site-content">
+            {{ content }}
+        </main>
+        
+        <footer class="site-footer">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. A quiet corner of the web.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        }
+    </script>
+</body>
+</html>

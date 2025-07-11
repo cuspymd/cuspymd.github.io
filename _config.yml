@@ -24,7 +24,7 @@ github_username:  cuspymd
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hacker
+# theme: removed external theme for custom design
 plugins: []
 
 google_analytics: UA-137715107-1
