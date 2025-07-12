@@ -19,15 +19,4 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if page.tags -%}
-    <footer class="post-footer">
-      <div class="post-tags">
-        <strong>Tags:</strong>
-        {%- for tag in page.tags -%}
-          <span class="tag">{{ tag }}</span>
-          {%- unless forloop.last -%}, {%- endunless -%}
-        {%- endfor -%}
-      </div>
-    </footer>
-  {%- endif -%}
 </article>
