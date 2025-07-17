@@ -24,6 +24,7 @@ github_username:  cuspymd
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 # theme: removed external theme for custom design
 plugins: []
 
