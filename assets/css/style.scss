@@ -3,23 +3,23 @@
 
 /* ===== CSS Custom Properties (Variables) ===== */
 :root {
-  /* Light theme colors - warm cafe atmosphere */
-  --bg-primary: #faf8f3;
-  --bg-secondary: #f5f2ed;
-  --bg-accent: #ede7db;
-  --text-primary: #2c2419;
-  --text-secondary: #5d5347;
-  --text-muted: #8b7e71;
-  --accent-color: #c17d3a;
-  --accent-hover: #a06a2f;
-  --border-color: #e6ddd1;
-  --shadow-light: rgba(44, 36, 25, 0.08);
-  --shadow-medium: rgba(44, 36, 25, 0.12);
+  /* Light theme colors - modern & clean */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-accent: #e8e8ed;
+  --text-primary: #1d1d1f;
+  --text-secondary: #424245;
+  --text-muted: #86868b;
+  --accent-color: #0066cc;
+  --accent-hover: #004499;
+  --border-color: #d2d2d7;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
   
   /* Typography */
-  --font-body: 'Crimson Text', 'Times New Roman', serif;
-  --font-heading: 'Inter', 'Helvetica Neue', sans-serif;
-  --font-mono: 'Monaco', 'Consolas', 'Courier New', monospace;
+  --font-body: "Pretendard Variable", Pretendard, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-heading: var(--font-body);
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -35,19 +35,19 @@
   --radius-lg: 12px;
 }
 
-/* Dark theme colors - cozy evening cafe */
+/* Dark theme colors - refined dark mode */
 [data-theme="dark"] {
-  --bg-primary: #1a1612;
-  --bg-secondary: #222018;
-  --bg-accent: #2a251f;
-  --text-primary: #f0ebe3;
-  --text-secondary: #d4cfc5;
-  --text-muted: #a39a8b;
-  --accent-color: #e5a567;
-  --accent-hover: #f2b875;
-  --border-color: #342f26;
-  --shadow-light: rgba(0, 0, 0, 0.2);
-  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --bg-primary: #000000;
+  --bg-secondary: #1c1c1e;
+  --bg-accent: #2c2c2e;
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --text-muted: #86868b;
+  --accent-color: #0a84ff;
+  --accent-hover: #409fff;
+  --border-color: #38383a;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
 }
 
 /* ===== Reset and Base Styles ===== */
@@ -64,7 +64,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -74,7 +74,7 @@ body {
 
 /* ===== Layout ===== */
 .container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   min-height: 100vh;
@@ -98,7 +98,7 @@ body {
 .site-title {
   font-family: var(--font-heading);
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent-color);
   text-decoration: none;
   letter-spacing: -0.025em;
@@ -118,6 +118,7 @@ body {
 .nav-links a {
   font-family: var(--font-heading);
   font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -271,7 +272,11 @@ a:hover {
 
 .post-content {
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.8;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
 }
 
 /* ===== Code Blocks ===== */

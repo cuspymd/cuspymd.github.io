@@ -3,6 +3,7 @@ _site
 .jekyll-metadata
 .jekyll-cache
 .claude
+*.log
 vendor/
 .bundle/
 .vscode
